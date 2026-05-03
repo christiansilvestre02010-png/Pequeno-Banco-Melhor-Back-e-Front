@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Chris Bank </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/extrato.css') }}"/>
+    <link rel="stylesheet" href="/static/css/extrato.css"/> 
+</head>
+<body> 
+    <h1> Extrato de <span>{{name}}</span></h1>
+
+    <ul>
+        {% for dados in extrato_html %}
+        <li>{{ dados }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if not extrato_html %}
+        <p>Nenhuma movimentação na conta</p>
+    {% endif %}
+
+    <a href="{{ url_for('banco') }}">
+        <img src="/static/img/icon-Home.svg" alt=" ">
+        <span>home</span>
+    </a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Chris Bank </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/saldo.css') }}"/>
+    <link rel="stylesheet" href="/static/css/saldo.css"/> 
+    <script src="{{ url_for('static', filename='js/moeda.js') }}" defer></script>
+    <script src="/static/js/moeda.js" defer></script>
+</head>
+<body> 
+    <div class="main"> 
+        <h1> Quanto deseja sacar?</h1>
+        <h3> Saldo: <span> R${{saldo}} </span></h3>
+    </div>
+    <form action="{{ url_for('Sacar') }}" method="POST">
+        <input type="text" id="moeda" name="saque" value="R$ 0,00" placeholder="0,00"/>
+        <button type="submit"> Sacar </button>
+    </form>
+
+    <a href="{{ url_for('banco') }}">
+        <img src="/static/img/icon-Home.svg" alt=" ">
+        <span>home</span>
+    </a>
+</body>
+</html>

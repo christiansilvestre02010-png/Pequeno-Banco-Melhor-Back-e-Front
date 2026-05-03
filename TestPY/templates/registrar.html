@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title> Chris Bank </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"/>
+    <link rel="stylesheet" href="/static/css/login.css"/>
+</head>
+<body> 
+    <div class="login">
+        <form action="{{ url_for('registrar') }}" method="POST">
+            <a href="{{ url_for('home') }}" class="Sair">
+                <img src="/static/img/icon-Sair.svg" alt=" ">
+                <span>login</span>
+            </a>
+
+            <h1> Registrando </h1>
+
+            <label><b>Usuário (5 digitos minimos)</b></label>
+            <input type="text" name="usuario" minlength="5" maxlength="15" placeholder="Digite seu nome" autocomplete="off" required>
+            <label><b>Senha (8 digitos minimos)</b></label>
+            <input type="password" name="senha" minlength="8" maxlength="20" placeholder="Digite sua senha" autocomplete="new-password" required>
+            <button type="submit" class="loginB"> Registrar </button>
+        </form>
+    </div>
+</body>
+</html>

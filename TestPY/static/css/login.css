@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand');
+
+body, html{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    font-family: 'Nunito', serif; 
+}
+.login{
+    background-image: url(/static/img/Cachoeira.jpeg);
+    min-height: 380px;
+    max-width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(144,238,144, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+
+    .Sair{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        text-align: right;
+        float: right;
+
+        img{
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    h1 {
+        font-size: 50px;
+        color: #248D27;
+    }
+    a, .loginB{
+        font-family: 'Nunito', serif;
+        color: #056608;
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    input{
+        background-color: transparent;
+        border-color: transparent;
+        font-size: 40px;
+        border: none;
+        font-family: 'Quicksand', serif;
+        box-shadow: 0 0 2px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px 100px;
+    }
+    input::placeholder{
+        font-size: auto;
+        text-align: center;
+        padding: auto;
+    }
+    input:focus{
+        outline: none;
+        border-color: #52C755;
+    }
+.loginB:active {
+    transform: scale(0.95);
+}
+a:hover, .loginB:hover{
+    transform: scale(1.05);
+    color: #ddd;
+}
+    input:-webkit-autofill, 
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus {
+        -webkit-text-fill-color: #000;
+        -webkit-box-shadow: 0 0 0px 1000px lightgreen inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}

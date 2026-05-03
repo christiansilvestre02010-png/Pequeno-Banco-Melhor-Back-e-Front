@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title> Chris Bank </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"/>
+    <link rel="stylesheet" href="/static/css/login.css"/> 
+</head>
+<body>
+    <div class="login">
+        <form action="{{ url_for('home') }}" method="POST">
+            <h1> Login </h1>
+            <label><b>Usuário</b></label>
+            <input type="text" name="usuario" placeholder="Digite seu nome" autocomplete="off" required>
+            <label><b>Senha</b></label>
+            <input type="password" name="senha" placeholder="Digite sua senha" autocomplete="off" required>
+            <button type="submit" class="loginB"> Logar </button>
+            <a href="{{ url_for('registrar') }}"> registrar</a>
+        </form>
+    </div>
+</body>
+</html>

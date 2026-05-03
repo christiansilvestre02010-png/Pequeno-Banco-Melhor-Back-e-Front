@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Chris Bank </title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/banco.css') }}"/>
+    <link rel="stylesheet" href="/static/css/banco.css"/>
+</head>
+<body> 
+    <div class="main">
+        <h1> Olá <span>{{name}} </span></h1>
+        <h3> Saldo em conta </h3>
+        <p> R$ {{saldo}} </p>
+    </div>
+
+    <nav class="link">
+        <a href="{{ url_for('Depositar') }}">
+            <img src="/static/img/icon-Saldo.svg" title="Depositar" alt=" ">
+            <span>depositar</span>
+        </a>
+        <a href="{{ url_for('Sacar') }}">
+            <img src="/static/img/icon-Sacar.svg" title="Sacar" alt=" ">
+            <span>sacar</span>
+        </a>
+        <a href="{{ url_for('Extrato') }}">
+            <img src="/static/img/icon-Extrato.svg" title="Extrato" alt=" ">
+            <span>extrato</span>
+        </a>
+    </nav>
+    <a href="{{ url_for('home') }}">
+        <img src="/static/img/icon-Sair.svg" title="Sair" alt=" ">
+        <span>Sair</span>
+    </a>
+</body>
+</html>
