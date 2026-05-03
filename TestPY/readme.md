@@ -9,8 +9,8 @@ Para chamar o programa:
 
     python app.py
 
-    em cima do link criado use: Crtl + Click,
-    vai abrir na seu navegador padrão.
+em cima do link criado use: Crtl + Click,
+vai abrir na seu navegador padrão.
 
 Para fechar:
     vá no terminal e use: Crtl + C.
